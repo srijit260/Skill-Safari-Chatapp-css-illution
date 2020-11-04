@@ -1,0 +1,5 @@
+@mixin screen-s {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}

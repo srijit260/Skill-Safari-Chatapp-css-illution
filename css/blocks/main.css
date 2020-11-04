@@ -1,0 +1,40 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 47 | / @include screen-s {
+ * 48 | |   .main {
+ * 49 | |     height: 100vh;
+ * 50 | |     flex-direction: row;
+ * 51 | |     align-items: center;
+ * 52 | |     justify-content: center;
+ * 53 | |     padding-left: 8rem;
+ * 54 | | 
+ * 55 | |     &__illustration {
+ * 56 | |       margin: 0;
+ * 57 | |       margin-right: 126px;
+ * 58 | |     }
+ * 59 | | 
+ * 60 | |     &:before {
+ * 61 | |       top: 0;
+ * 62 | |       left: -86px;
+ * 63 | |     }
+ * 64 | | 
+ * 65 | |     &:after {
+ * 66 | |       bottom: 0;
+ * 67 | |       right: -181px;
+ * 68 | |       transform: translateX(0);
+ * 69 | |     }
+ * 70 | |   }
+ * 71 | \ }
+ *    '
+ *   scss/blocks/main.scss 47:1  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 47 \2502  \250c  @include screen-s {\a 48 \2502  \2502    .main {\a 49 \2502  \2502      height: 100vh;\a 50 \2502  \2502      flex-direction: row;\a 51 \2502  \2502      align-items: center;\a 52 \2502  \2502      justify-content: center;\a 53 \2502  \2502      padding-left: 8rem;\a 54 \2502  \2502  \a 55 \2502  \2502      &__illustration {\a 56 \2502  \2502        margin: 0;\a 57 \2502  \2502        margin-right: 126px;\a 58 \2502  \2502      }\a 59 \2502  \2502  \a 60 \2502  \2502      &:before {\a 61 \2502  \2502        top: 0;\a 62 \2502  \2502        left: -86px;\a 63 \2502  \2502      }\a 64 \2502  \2502  \a 65 \2502  \2502      &:after {\a 66 \2502  \2502        bottom: 0;\a 67 \2502  \2502        right: -181px;\a 68 \2502  \2502        transform: translateX(0);\a 69 \2502  \2502      }\a 70 \2502  \2502    }\a 71 \2502  \2514  }\a    \2575 \a   scss/blocks/main.scss 47:1  root stylesheet";
+}

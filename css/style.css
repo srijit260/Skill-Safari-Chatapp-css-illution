@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+}
+
+html {
+  --sub-heading: hsl(276, 100%, 81%);
+  --chat-left: hsl(276, 55%, 52%);
+  --chat-right: hsl(271, 15%, 43%);
+  --placeholder-text: hsl(206, 6%, 79%);
+  --dark-violet: hsl(271, 36%, 24%);
+  --paragraph: hsl(270, 7%, 64%);
+  --light-magenta: hsl(293, 100%, 63%);
+  --light-Violet: hsl(264, 100%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --app-background: hsl(270, 20%, 96%);
+  --radio-button-outline: hsl(289, 100%, 72%);
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.slide-top {
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.non-visible {
+  opacity: 0;
+}
+
+.main {
+  position: relative;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+.main__illustration {
+  width: 15.5rem;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+.main:before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: 50%;
+  width: 507px;
+  height: 702px;
+  z-index: -1;
+  background: linear-gradient(45deg, var(--light-Violet) 20%, var(--light-magenta) 100%);
+  border-radius: 0px 0px 254px 254px;
+}
+.main:after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  right: 50%;
+  width: 507px;
+  height: 702px;
+  z-index: -1;
+  background: #f9f4fa;
+  border-radius: 254px 254px 0px 0px;
+  transform: translateX(100%);
+}
+
+@media (min-width: 1000px) {
+  .main {
+    height: 100vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8rem;
+  }
+  .main__illustration {
+    margin: 0;
+    margin-right: 126px;
+  }
+  .main:before {
+    top: 0;
+    left: -86px;
+  }
+  .main:after {
+    bottom: 0;
+    right: -181px;
+    transform: translateX(0);
+  }
+}
+.section__title {
+  text-align: center;
+  color: var(--dark-violet);
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.section__description {
+  text-align: center;
+  color: var(--paragraph);
+  line-height: 1.75rem;
+  letter-spacing: 0.005em;
+  max-width: 445px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1000px) {
+  .section__title {
+    text-align: left;
+  }
+  .section__description {
+    text-align: left;
+    width: 445px;
+  }
+}
+.phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  width: 247px;
+  height: 505px;
+  border-radius: 30px;
+  box-shadow: 0px 30px 50px rgba(62, 39, 83, 0.3);
+}
+.phone__header {
+  position: relative;
+  width: 227px;
+  height: 66px;
+  background: linear-gradient(90deg, var(--light-Violet) 0%, var(--light-magenta) 100%);
+  border-radius: 20px 20px 4px 4px;
+}
+.phone__header-container {
+  position: relative;
+  display: flex;
+  margin: 30px 0 0 30px;
+}
+.phone__header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 129px;
+  height: 18px;
+  margin-left: -65px;
+  background: var(--white);
+  border-radius: 0px 0px 11.5px 11.5px;
+}
+.phone__title-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+.phone__avatar {
+  width: 24px;
+  height: 24px;
+  border: solid 1px var(--white);
+  border-radius: 50%;
+}
+.phone__title {
+  color: var(--white);
+  font-weight: 300;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+.phone__sub-title {
+  color: var(--sub-heading);
+  font-size: 8px;
+}
+.phone__main {
+  display: flex;
+  flex-direction: column;
+  width: 227px;
+  height: 418px;
+  padding: 0.5em;
+  background: var(--app-background);
+  border-radius: 4px 4px 20px 20px;
+}
+.phone__dog-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+.phone__message {
+  align-self: flex-end;
+  font-size: 8px;
+  color: var(--chat-right);
+  background-color: var(--white);
+  line-height: 130%;
+  max-width: 128px;
+  border-radius: 10px 10px 4px 10px;
+  margin-bottom: 1em;
+  padding: 1em;
+  box-shadow: 0px 2px 8px rgba(62, 39, 83, 0.1);
+}
+.phone__message--space-bottom {
+  margin-bottom: 16px;
+}
+.phone__message--left {
+  align-self: flex-start;
+  text-align: left;
+  color: var(--chat-left);
+  background-color: rgba(146, 65, 200, 0.08);
+  border-radius: 10px 10px 10px 4px;
+  box-shadow: 0px 0px 0px rgba(62, 39, 83, 0.1);
+}
+.phone__message--quote {
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  text-align: right;
+  min-width: 160px;
+  color: var(--white);
+  border-radius: 10px 10px 10px 4px;
+  background: linear-gradient(270deg, var(--light-Violet) 0%, var(--light-magenta) 100%);
+  padding-right: 16px;
+}
+.phone__message--quote::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--radio-button-outline);
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.phone__message--quote-price {
+  flex-grow: 2;
+  font-size: 13px;
+  font-weight: 500;
+}
+.phone__message-photos {
+  display: flex;
+  align-self: flex-end;
+  justify-content: space-between;
+  background-color: transparent;
+  width: 136px;
+  margin: 8px 0;
+  padding: 0;
+  box-shadow: none;
+}
+.phone__input {
+  position: relative;
+  font-size: 8px;
+  width: 212px;
+  color: var(--placeholder-text);
+  background-color: var(--white);
+  border-radius: 17px;
+  padding: 12px 18px;
+  margin: 1em 0;
+}
+.phone__btn {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  margin-top: -12px;
+  background-color: var(--dark-violet);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+
+.arrow {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 50%;
+  top: 50%;
+  margin: -4px 0 0 -4px;
+  transform: rotate(45deg);
+}
+.arrow::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-width: 1.5px 1.5px 0 0;
+  border-style: solid;
+  border-color: var(--white);
+}
+.arrow--left {
+  width: 5px;
+  height: 5px;
+  left: 0;
+  margin-top: 0;
+  margin-left: -10px;
+  transform: scaleX(0.7) rotate(225deg);
+}
+
+.settings {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 2px;
+  height: 2px;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+.settings::before, .settings::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 2px;
+  height: 2px;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+.settings::after {
+  top: 3px;
+}
+
+/*# sourceMappingURL=style.css.map */
